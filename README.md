@@ -49,5 +49,5 @@ Public License".
 
 If you use sRNA-Detect, please cite the following article:
 
-[L. Peña-Castillo, M. Grüll, M.E. Mulligan and A.S. Lang, Detection of bacterial small transcripts from RNA-Seq data: a comparative assessment. In the proceedings of the Pacific Symposium on Biocomputing (PSB) 2016.](https://doi.org/10.1142/9789814749411_0042)
+[L. Peña-Castillo, M. Grüll, M.E. Mulligan and A.S. Lang, Detection of bacterial small transcripts from RNA-Seq data: a comparative assessment. Biocomputing 2016: pp. 456-467.](https://doi.org/10.1142/9789814749411_0042)
 
