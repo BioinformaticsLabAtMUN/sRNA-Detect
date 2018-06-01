@@ -45,6 +45,15 @@ Written by Lourdes Pena-Castillo (lourdes at mun dot ca), Memorial University of
 Newfoundland. Copyright 2015. "Release under the terms of the GNU General
 Public License".
 ```
+## Filtering Detected Transcripts
+
+If you are looking for novel sRNAs, we recommend to filter out the transcripts detected by sRNA-Detect by removing those that overlap annotated transcripts. To do that, one can use [BedTools' intersectBed](http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html) as follows:
+
+```
+bedtools intersect -wo -a output_sRNAs.gtf -b annotatedTranscripts.bed -sorted -v -s -f 0.8
+```
+This command won't remove putative asRNAs or putative sRNAs that partially overlap a larger annotated transcript.
+
 ## Citing
 
 If you use sRNA-Detect, please cite the following article:
