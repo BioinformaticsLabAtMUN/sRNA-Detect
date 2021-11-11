@@ -4,14 +4,14 @@ sRNA-Detect detects small RNAs from bacterial RNA-seq data.
 
 ## Requirements
 
-To run sRNA-Detect, the [HTSeq  python library](http://htseq.readthedocs.io/en/release_0.9.1/) (version 0.5.4p5) and Python 2.7 need to be installed. 
+To run sRNA-Detect, the [HTSeq  python library](http://htseq.readthedocs.io/en/release_0.9.1/) (version 0.13.5) and Python 3.9 need to be installed. 
 
 ## Running sRNA-Detect
 
-After you have installed Python 2.7 and HTSeq, you can simply run sRNA-Detect in command-line as shown in the example below:
+After you have installed Python 3 and HTSeq, you can simply run sRNA-Detect in command-line as shown in the example below:
 
 ```
-python2.7 sRNADetect.py  -samFile "file1.sam"  -samFile "file2.sam" -samFile "file3.sam" -out "output_sRNAs.gtf"
+python3 sRNADetect.py  -samFile "file1.sam"  -samFile "file2.sam" -samFile "file3.sam" -out "output_sRNAs.gtf"
 ```
 
 ## Script Usage
@@ -21,12 +21,12 @@ Executing sRNADetect without parameters prints the following help message:
 ```
 usage: sRNADetect.py [options] -samFile "sam_file1" -samFile "sam_file2"
 
-This script takes alignment files in SAM format and detect small transcripts
+This script takes alignment files in SAM/BAM format and detect small transcripts
 with uniform coverage and no gaps
 
 optional arguments:
   -h, --help          show this help message and exit
-  -samFile SAMFILE    REQUIRED: sam file to read.
+  -samFile SAMFILE    REQUIRED: sam/bam file to read.
   -minLen MINLEN      minimum length to consider for small transcripts
   -maxLen MAXLEN      maximum length to consider for small transcripts
   -minH MINH          minimum number of reads across all samples required to
