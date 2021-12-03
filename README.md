@@ -4,7 +4,7 @@ sRNA-Detect detects small RNAs from bacterial RNA-seq data.
 
 ## Requirements
 
-To run sRNA-Detect, the [HTSeq  python library](http://htseq.readthedocs.io/en/release_0.9.1/) (version 0.13.5) and Python 3.9 need to be installed. 
+To run sRNA-Detect, the [HTSeq  python library](https://htseq.readthedocs.io/en/latest/) (version 0.13.5) and Python 3.9 need to be installed. 
 
 ## Running sRNA-Detect
 
