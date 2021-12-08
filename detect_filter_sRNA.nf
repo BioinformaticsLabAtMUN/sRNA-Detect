@@ -201,6 +201,6 @@ process separate_overlapped_sRNA {
 
     script:
     """
-    (cut -f9 annotatedTranscripts.gff | cut -d";" -f4 | grep biotype | sort -u) | while IFS="" read -r line; do grep "\$line" overlap.gff > "\$line.gff"; done
+    (cut -f9 annotatedTranscripts.gff | cut -d";" -f4 | grep biotype | sort -u) | while IFS="" read -r line; do if grep -q "\$line" overlap.gff; then grep "\$line" overlap.gff > "\$line.gff"; fi done
     """
 }
