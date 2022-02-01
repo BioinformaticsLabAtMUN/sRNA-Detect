@@ -113,13 +113,10 @@ Chromosome	sRNADetect	sRNA	246	269	12.543877454363388	+	.	gene_id "10"; unique_i
 ```
 * ``non-overlap.gff`` -The output from Filtering process. It is in the same format as ``sRNADetect_Rcap_output.gtf``.
 But it contains only novel sRNAs, which are filtered by removing those that overlap with annotated transcripts. 
-* ``overlap.gff`` -The output from Filtering process. It is in the same format as ``sRNADetect_Rcap_output.gtf``.
-But it contains only transcripts that overlap with annotated transcripts. In the file, each line represents an overlap. 
-The left part is a detected transcript, and the middle part is the annotated transcript it overlaps with. The right part is the number of overlapping
-bases and the overlap percentage.
+* ``overlap.gff`` -The output from Filtering process. In the file, each line represents an overlap. 
+The first nine columns are the same as in the file sRNADetect_Rcap_output.gtf, then there are several columns describing the overlapped annotated transcript and the last two column are the number of overlapping bases and the percentage of overlap with respect to the sRNA.
 ```
 Chromosome sRNADetect sRNA 35149 35234 12.801680672268908 - . gene_id "755"; unique_id "RCAP_sre00755" Chromosome RefSeq gene 34143 35957 . - . ID=gene26;Name=RCAP_RS00135;gbkey=Gene;gene_biotype=protein_coding;locus_tag=RCAP_RS00135;old_locus_tag=RCAP_rcc00027 86 1
-Chromosome sRNADetect sRNA 35149 35234 12.801680672268908 - . gene_id "755"; unique_id "RCAP_sre00755" Chromosome Protein Homology CDS 34143 35957 . - 0 ID=cds26;Parent=gene26;Dbxref=Genbank:WP_013065774.1;Name=WP_013065774.1;gbkey=CDS;product=membrane protein;protein_id=WP_013065774.1;transl_table=11 86 1
 Chromosome sRNADetect sRNA 36497 36584 10.02395504610078 - . gene_id "756"; unique_id "RCAP_sre00756" Chromosome RefSeq gene 36047 36577 . - . ID=gene27;Name=RCAP_RS00140;gbkey=Gene;gene_biotype=protein_coding;locus_tag=RCAP_RS00140;old_locus_tag=RCAP_rcc00028 81 0.920455
 ```
 * ``gene_biotype=*.gff`` The output from Categorizing process. These files are results of
