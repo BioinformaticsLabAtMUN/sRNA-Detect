@@ -1,12 +1,12 @@
 # sRNA-Detect
 
-A Pipeline for small RNA Detection (sRNA-Detect) written in the [Nextflow](http://nextflow.io).
+A Pipeline for bacterial small RNA Detection (sRNA-Detect) written in [Nextflow](http://nextflow.io).
 
 This pipeline goes through the following processes:
 
 * sRNA-Detect process which detects small RNAs from bacterial RNA-seq data.
 * Sorting process which sort the sRNAs detected from sRNA-Detect.
-* Filtering process which filters out the overlapping transcripts among detected sRNAs.
+* Filtering process which filters out sRNAs overlaping with annotated RNAs.
 * Categorizing process which categorizes the overlapping transcripts filtered out from previous process.
 ##  1 Requisites
 ### 1.1 Nextflow
@@ -28,9 +28,9 @@ It is the most recommended option.
 
 Install [Docker](https://www.docker.com/) 18.03 (or higher) and then pull the docker image:
 ```
-docker pull penacastillolab/sRNA-Detect
+docker pull penacastillolab/srna_detect
 ```
-To get better understanding of the Docker image, please see the included [Dockerfile](Dockerfile).
+This Docker image was generated using this [Dockerfile](Dockerfile).
 
 ### 1.2.2 Natively
 If you are not using Docker, you must install the following softwares and packages:
@@ -39,7 +39,7 @@ If you are not using Docker, you must install the following softwares and packag
 * [Bedtools](http://bedtools.readthedocs.io/en/latest/index.html) version 2.27 (or higher)
 
 ## 2 Pipeline usage
-After getting the file [detect_filter_sRNA.nf](detect_filter_sRNA.nf), you can check how to use the pipeline by this command:
+After getting the file [detect_filter_sRNA.nf](detect_filter_sRNA.nf), you can check how to use the pipeline by typing:
 ```
 nextflow detect_filter_sRNA.nf --help
 ```
