@@ -39,7 +39,12 @@ If you are not using Docker, you must install the following softwares and packag
 * [Bedtools](http://bedtools.readthedocs.io/en/latest/index.html) version 2.27 (or higher)
 
 ## 2 Pipeline usage
-After getting the file [detect_filter_sRNA.nf](detect_filter_sRNA.nf), you can check how to use the pipeline by typing:
+You can clone this repository using git:
+```
+git clone https://github.com/BioinformaticsLabAtMUN/sRNA-Detect.git
+```
+
+After cloning the repository,  you can check how to use the pipeline [detect_filter_sRNA.nf](detect_filter_sRNA.nf) by typing:
 ```
 nextflow detect_filter_sRNA.nf --help
 ```
