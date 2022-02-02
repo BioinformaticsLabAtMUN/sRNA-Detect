@@ -34,12 +34,14 @@ if(params.help) {
 }
 
 alignmentFileList = Channel.fromPath( "${params.alignmentDir}/*.{sam,bam}").collect()
+indexFileList = Channel.fromPath( "${params.alignmentDir}/*.bai").collect()
 
 process sRNA_Detect {
     publishDir "${params.outputDir}/sRNADetected"
 
     input:
     file alignmentFileList
+    file indexFileList
     output:
     file params.output into sRNADetected
 
