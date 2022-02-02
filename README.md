@@ -38,6 +38,12 @@ If you are not using Docker, you must install the following softwares and packag
 * [HTSeq](https://htseq.readthedocs.io/en/master/) version 0.13.5 (or higher)
 * [Bedtools](http://bedtools.readthedocs.io/en/latest/index.html) version 2.27 (or higher)
 
+### 1.3 Index files
+Before running sRNA-Detect, generate the index files for all BAM/SAM files in the alignmentDir (see Pipeline usage below). You can create an index file using samtools. For example, the following command will create the index file for the sam file ``SB1003_3_2_small.sam``.
+```
+samtools index SB1003_3_2_small.sam 
+```
+
 ## 2 Pipeline usage
 You can clone this repository using git:
 ```
